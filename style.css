@@ -68,6 +68,16 @@ input#valor {
     outline: none;
 }
 
+input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+::placeholder{
+  color: white;
+}
+
 .ui-btn {
     --btn-default-bg: rgb(41, 41, 41);
     --btn-padding: 15px 20px;

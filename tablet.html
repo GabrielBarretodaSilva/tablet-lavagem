@@ -14,7 +14,7 @@
                 <h1>Lavagem de dinheiro</h1>
                 <form action="Lavar">
                     <div>
-                        <input type="number" name="valor" id="valor" placeholder="          Digite um valor para lavar">
+                        <input type="number" name="valor" id="valor" inputmode="none" placeholder="          Digite um valor para lavar">
                     </div>
                    <div>
                        <button type="submit" class="ui-btn">
@@ -27,5 +27,14 @@
            </div>
         </section>
     </main>
+
+    <script>
+        document.getElementById('valor').addEventListener('input', function(event) {
+            let inputValue = this.value;
+            if (inputValue < 0) {
+                this.value = '';
+            }
+        });
+    </script>
 </body>
 </html>
